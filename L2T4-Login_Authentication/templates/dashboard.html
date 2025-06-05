@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div class="dashboard-container">
+        <h1>Dashboard</h1>
+        <p class="delay-1">Welcome to your dashboard, ...</p>
+        <p class="delay-2">This is a protected page ...</p>
+        <p class="delay-3">You can <a href="#">logout</a> ...</p>
+    </div>
+{% endblock %}

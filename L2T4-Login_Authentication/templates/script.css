@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #f0f4f8 0%, #d9e7fa 100%);
+  color: #222;
+  min-height: 100vh;
+  animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 2.5rem 1rem 1.5rem 1rem;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  animation: slideDown 1s ease;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-40px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.5rem;
+  color: #2563eb;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+header p {
+  margin: 0;
+  color: #555;
+  font-size: 1.2rem;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  background: #fff;
+  max-width: 500px;
+  margin: 3rem auto 2rem auto;
+  padding: 2.5rem 2rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 32px rgba(37,99,235,0.10);
+  text-align: center;
+  animation: cardFadeIn 1s cubic-bezier(.77,0,.18,1);
+}
+
+@keyframes cardFadeIn {
+  from { opacity: 0; transform: translateY(40px);}
+  to   { opacity: 1; transform: translateY(0);}
+}
+
+.dashboard-container h1 {
+  color: #2563eb;
+  margin-bottom: 1.2rem;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.dashboard-container p {
+  color: #444;
+  font-size: 1.1rem;
+  margin: 1.1rem 0;
+  opacity: 0;
+  animation: fadeInUp 0.8s forwards;
+}
+
+.dashboard-container p.delay-1 { animation-delay: 0.3s; }
+.dashboard-container p.delay-2 { animation-delay: 0.6s; }
+.dashboard-container p.delay-3 { animation-delay: 0.9s; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px);}
+  to   { opacity: 1; transform: translateY(0);}
+}
+
+/* Links */
+a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #1e40af;
+  text-decoration: underline;
+}
+
+/* Card Layout (for other pages) */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 1rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(37,99,235,0.08);
+  padding: 2rem;
+  width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: cardFadeIn 1s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(37,99,235,0.16);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #2563eb;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  background: #2563eb;
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 2rem;
+  letter-spacing: 1px;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
+  animation: fadeIn 1.2s 0.5s backwards;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .dashboard-container {
+    margin: 2rem 1rem;
+    padding: 2rem 1rem;
+  }
+}
